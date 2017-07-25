@@ -1,7 +1,60 @@
 function steamrollArray(arr) {
-  console.log(Array.isArray(arr[1]));
+
+  //console.log(arr);
+arr.map
+
+
+
+
+
+
+
 
   return arr;
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);
+
+/*
+//attempting steamrollArray again from scratch above
+function steamrollArray(arr) {
+  let flatArray = [], remainArray = [], temp=0, x=0;
+
+
+  while(arraysRemain(arr)){
+for(let i=0; i<arr.length; i++){
+    if(!Array.isArray(arr[i])){
+      console.log('BOOM',x);
+      flatArray.push(arr[i]);
+      arr.splice(i,1);
+      console.log('arr after splice', arr);
+      i++;
+    }
+    else{
+      console.log('BOOM',x);
+      console.log('beginning of else', arr);
+      arr.push(arr[i][0]);
+      console.log('after arr[i][0] push', arr);
+      arr.splice(i,1);
+      console.log('arr after splice', arr);
+      i=0;
+    }
+    }
+console.log('flat array is',flatArray, 'on pass', x);
+x++;
+
+  }
+}
+
+
+
+function arraysRemain(arr){
+  for(let i=0; i<arr.length; i++){
+    if(Array.isArray(arr[i])){
+      return true;
+    }
+  }
+  return false;
 }
 
 steamrollArray([1, [2], [3, [[4]]]]);
